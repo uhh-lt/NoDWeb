@@ -1,0 +1,137 @@
+@()
+
+<!-- Help Modal: TODO move me to a handle bar and open me -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Schließen</span></button>
+				<h4 class="modal-title" id="myModalLabel">Informationen und Hilfe</h4>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3 col-md-3">
+							<div class="panel-group" id="accordion">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close"></span>Allgemein</a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse">
+										<div class="panel-body">
+											<table class="table">
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-info-sign"></span><a href="#" data-toggle="tab" data-target="#about-network">Über das Netzwerk des Tages</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-comment"></span><a href="#" data-toggle="tab" data-target="#science-dialog">Wissenschaft im Dialog</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-book"></span><a href="#">Literatur und Referenzen</a>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th"></span>Bedienung</a>
+										</h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse in active">
+										<div class="panel-body">
+											<table class="table">
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-collapse-up"></span><a href="#" data-toggle="tab" data-target="#network-instruction">Netzwerke betrachten</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-list-alt"></span><a href="#" data-toggle="tab" data-target="#sources-instruction">Zeitungsquellen</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-globe"></span><a href="#" data-toggle="tab" data-target="#social-instruction">Social Tagging</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-stats"></span><a href="#" data-toggle="tab" data-target="#trend-instruction">Trend Diagramm</a>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-retweet"></span>Updates</a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse">
+										<div class="panel-body">
+											<table class="table">
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-refresh text-primary"></span><a href="#" data-toggle="tab" data-target="#version">Versionshinweise</a>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-envelope"></span>Kontakt</a>
+										</h4>
+									</div>
+									<div id="collapseFour" class="panel-collapse collapse">
+										<div class="panel-body">
+											<table class="table">
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-earphone"></span><a href="#" data-toggle="tab" data-target="#contact">Kontakt Informationen</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="glyphicon glyphicon-user"></span><a href="#">Über uns</a>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-content col-sm-9">
+							@help.about()
+							@help.howto()
+							@help.version()
+							@help.contact()
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# PAGES                                                                                         #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+GET         /                                        controllers.Application.index
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# GRAPHS  & TrendChart                                                                          #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+GET         /graphs/cluster/:date                    controllers.Graphs.clusterGraph(date: String)
+GET         /graphs/trend-chart/:date                controllers.TrendChart.createTrendChart(date: String)
+GET         /graphs/trend-chart/by-node/:node        controllers.TrendChart.addSeries(node: Long)
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# SOURCES                                                                                       #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+GET         /infos/clustered-sources/:rId            controllers.Graphs.clusteredSources(rId: Long, date: String)
+GET         /infos/twitter-sources/:rId              controllers.Twitter.getTweetsForRelationship(rId: Long, date: String)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# TAGS                                                                                          #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+GET         /tags/add                                controllers.Tags.add(r: Long, s: Long, label: String, direction: String, created: String, isSituative: Boolean)
+GET         /tags/remove                             controllers.Tags.remove(tagId: Long)
+GET         /tags/showLabelForAllDays                controllers.Tags.showLabelInNetworkForAllDays(rId: Long, label: String, date: String)
+GET         /tags/showLabelForToday                  controllers.Tags.showLabelInNetworkForToday(rId: Long, label: String, date: String)
+GET         /tags/by-relationship/:rId               controllers.Tags.byRelationship(rId: Long)
+GET         /tags/by-relationships/:rIds             controllers.Tags.byRelationships(rIds: String)
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# JS ROUTING AND RESOURCES                                                                      #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+GET         /assets/javascripts/routes               controllers.Application.javascriptRoutes()
+GET         /assets/*file                            controllers.Assets.at(path="/public", file)

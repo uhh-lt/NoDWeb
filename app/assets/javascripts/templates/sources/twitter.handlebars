@@ -1,0 +1,32 @@
+<div class="container-fluid twitter-sources">
+	<div class="panel-group" id="twitter-accordion" role="tablist" aria-multiselectable="true">
+	{{#each entities}}
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="twitter-heading{{@index}}">
+				<h6 class="panel-title">
+					<a data-toggle="collapse" data-parent="#twitter-accordion" href="#twitter-collapse{{@index}}" aria-expanded="true" aria-controls="twitter-collapse{{@index}}">
+						{{name}} <span class="badge pull-right"><span class="fa fa-twitter"></span> {{messagecnt}}</span>
+					</a>
+				</h6>
+			</div>
+			<div id="twitter-collapse{{@index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="twitter-heading{{@index}}">
+				<div class="panel-body">
+					{{#unless messagecnt}}
+						<div class="alert alert-info" role="alert">Es wurden keine Tweets für &quot;{{name}}&quot; gefunden.</div>
+					{{/unless}}
+		{{#each messages}}
+			<blockquote>
+				{{#highlighttwitter message}}
+					{{this}}
+				{{/highlighttwitter}}
+				<footer>
+					{{moment data format="DD.MM.YYYY"}}
+				</footer>
+			</blockquote>
+		{{/each}}
+				</div>
+			</div>
+		</div>
+	{{/each}}
+	</div>
+</div>

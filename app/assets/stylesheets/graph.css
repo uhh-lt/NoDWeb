@@ -1,0 +1,96 @@
+svg {
+	font-size: 10px;
+	text-rendering: optimizeSpeed;
+}
+
+svg text {
+	pointer-events: none;
+}
+
+svg .node.cluster {
+	cursor: pointer;
+}
+
+svg .node.cluster .label-0 {
+	text-anchor: end;
+	transform: translate(0, -12px);
+	-webkit-transform: translate(0, -12px);
+}
+
+svg .node.cluster .label-1 {
+	text-anchor: start;
+}
+
+svg .node.cluster .label-2 {
+	text-anchor: end;
+	transform: translate(0, 12px);
+	-webkit-transform: translate(0, 12px);
+}
+
+svg .node.entity text {
+	transform: translate(10px, 0px);
+	-webkit-transform: translate(10px, 0px);
+}
+
+svg .node.hover > circle {
+	stroke-width: 3px;
+	stroke: #00A700 !important;
+	/*transition: all .2s;
+	transform: scale(2.1);*/
+}
+
+svg .node.parent-hover > circle {
+	stroke-width: 1px;
+	stroke: #00A700 !important;
+}
+
+svg .node.hover, svg .node.parent-hover, svg .link.hover, svg .link.parent-hover {
+	opacity: 1.0 !important;
+}
+
+svg.hover .node, svg.hover .link {
+	opacity: 0.15;
+}
+
+svg .link.invisible, svg .linkhandle.invisible {
+	display: none;
+	pointer-events: none;
+}
+
+svg .link {
+	stroke: #777;
+	fill: none !important;
+	pointer-events: none;
+}
+
+svg .linkhandle {
+	fill: none;
+	stroke-width: 10px;
+	pointer-events: stroke;
+	cursor: pointer;
+}
+
+svg .link.selected {
+	stroke-width: 4px !important;
+	stroke: #00A700;
+}
+
+svg .link.parent-hover {
+	stroke: #00A700;
+}
+
+svg .link.hover {
+	stroke: #00A700;
+	stroke-width: 3px;
+}
+
+svg .hull {
+	fill-opacity: 0.3;
+	cursor: pointer;
+}
+		
+svg .tags text {
+	text-anchor: middle;
+	fill: #5cb85c;
+	pointer-events: none;
+}

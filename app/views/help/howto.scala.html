@@ -1,0 +1,78 @@
+<div id="network-instruction" class="tab-pane fade in active">
+	<h1>Netzwerke betrachten</h1>
+
+	<!--<div class="media">
+		<a class="pull-left" href="#">
+			<img class="media-object" src="@routes.Assets.at("images/time_select.gif")">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">Netzwerk auswählen</h4>
+			<p>...</p>
+		</div>
+	</div>-->
+
+	<div class="media">
+		<a class="pull-left" href="#">
+			<img class="media-object" src="@routes.Assets.at("images/open_cluster.gif")">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">Themengruppen</h4>
+			<p>Das Netzwerk des Tages ist in Gruppen unterteilt, welche verschiedene Themen wie z.B. Sport, Wirtschaft oder Politik
+				repräsentieren. Eine solche Gruppe kann durch einen Klick geöffnet und geschlossen werden. Die Beschriftung
+			der individuellen Themen sind jeweils die wichtigsten Entitäten aus dieser Gruppe. </p>
+
+			<p>Das Netzwerk selbst besteht aus Personen und Organisationen. Diese sind durch eine Kante verbunden, wenn
+			die beiden Entitäten in der Zeitung innerhalb eines Satzes erwähnt wurden.</p>
+
+			<ul class="list-inline">
+				<li>Person <img src="@routes.Assets.at("images/per.svg")" height="16" width="16"></li>
+				<li>Organisation <img src="@routes.Assets.at("images/org.svg")" height="16" width="16"></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="sources-instruction" class="tab-pane fade">
+	<h1>Zeitungsquellen</h1>
+
+	<div class="media">
+		<a class="pull-left" href="#">
+			<img class="media-object" src="@routes.Assets.at("images/sources.gif")" width="500">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">Betrachten der Zeitungsausschnitte</h4>
+			<p>Beim Klick auf eine Kante zwischen zwei Entitäten werden die zugrundeliegenden Quellen geöffnet.
+			Diese enthalten Ausschnitte aus Zeitungstexten, welche über die beiden Entitäten berichten.
+			Die Quellen sind außerdem nach Themen gruppiert. </p>
+
+		</div>
+	</div>
+</div>
+
+<div id="social-instruction" class="tab-pane fade">
+	<h1>Social Tagging</h1>
+
+	<div class="media">
+		<a class="pull-left" href="#">
+			<img class="media-object" src="@routes.Assets.at("images/tagging.gif")">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">Hinzufügen von Relationen</h4>
+			<p>Das Social Tagging von Beziehungen erlaubt es, Beziehungen zwischen Personen und Organisationen explizit mit Tags anzureichern.
+				Diese Tags beschreiben die semantische Relation zwischen den Akteuren, wie das folgende Beispiel zeigt:
+			</p>
+			<strong>Angela Merkel</strong> <mark>ist Mitglied</mark> <strong>CDU</strong>.
+		</div>
+	</div>
+</div>
+
+<div id="trend-instruction" class="tab-pane fade">
+	<h1>Trend Diagramm</h1>
+
+	<img class="media-object" src="@routes.Assets.at("images/frequency.gif")" width="800">
+	<h4 class="media-heading">Beobachten von aktuellen Trends</h4>
+	<p>Das Trend Diagramm zeigt Begriffe, welche besonders aktuell für den ausgewählten Tag sind.
+		Die Aktuatlität eines Begriffs wird bestimmt aus seiner Häufigkeit heute, verglichen mit der durchschnittlichen
+		Häufigkeit über einen längeren Zeitraum. Das Trend Diagramm selbst visualisiert den Trend des Begriffs innerhalb der letzten Monate.
+	</p>
+</div>
