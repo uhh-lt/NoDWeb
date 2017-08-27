@@ -1,0 +1,23 @@
+version: '3'
+services:
+  nodweb:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - 9000:9000
+
+  db:
+    image: mariadb
+    volumes:
+      - "nod_data:/var/lib/mysql"
+    environment:
+       MYSQL_ROOT_PASSWORD: nod
+       MYSQL_DATABASE: nodcore
+       MYSQL_USER: nod
+       MYSQL_PASSWORD: nod
+    ports:
+      - 3306:3306
+
+volumes:
+  nod_data:
