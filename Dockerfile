@@ -26,4 +26,4 @@ RUN \
   && rm -rf /app/* && \
   unzip /tmp/nodweb-1.0.2.zip -d /app
 
-CMD /app/nodweb-1.0.2/bin/nodweb -DConfig.file=/app/nodweb-1.0.2/conf/application.conf
+CMD rm -f /app/nodweb-1.0.2/RUNNING_PID && /app/nodweb-1.0.2/bin/nodweb -DConfig.file=/app/nodweb-1.0.2/conf/application.conf
